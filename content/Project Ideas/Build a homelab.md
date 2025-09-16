@@ -7,19 +7,22 @@ How
 	3. Pick cloudlfared and tailscale
 	4. Download from the link
 
-https://factory.talos.dev/?arch=amd64&cmdline=net.ifnames%3D0&cmdline-set=true&extensions=-&extensions=siderolabs/cloudflared&extensions=siderolabs/gvisor&extensions=siderolabs/intel-ucode&extensions=siderolabs/tailscale&platform=metal&target=metal&version=1.11.0
+https://factory.talos.dev/?arch=amd64&board=undefined&cmdline=net.ifnames%3D0&cmdline-set=true&extensions=-&extensions=siderolabs/cloudflared&extensions=siderolabs/gvisor&extensions=siderolabs/intel-ucode&extensions=siderolabs/iscsi-tools&extensions=siderolabs/tailscale&extensions=siderolabs/util-linux-tools&platform=metal&secureboot=undefined&target=metal&version=1.11.1
 
 Looks like this
 ```yaml
-customization: 
-	extraKernelArgs: 
-		- net.ifnames=0
-	systemExtensions: 
-		officialExtensions: 
-			- siderolabs/cloudflared 
-			- siderolabs/tailscale
-			- siderolabs/intel-ucode
-			- siderolabs/gvisor
+customization:
+    extraKernelArgs:
+        - net.ifnames=0
+    systemExtensions:
+        officialExtensions:
+            - siderolabs/cloudflared
+            - siderolabs/gvisor
+            - siderolabs/intel-ucode
+            - siderolabs/iscsi-tools
+            - siderolabs/tailscale
+            - siderolabs/util-linux-tools
+```
 ```
 
 2. Setup follow this [guide](https://www.talos.dev/v1.11/talos-guides/install/virtualized-platforms/proxmox/)
@@ -123,10 +126,45 @@ provider "proxmox" {
 }
 ```
 
+After booting, First it will going into maintenance mode so nothing will going on yet
+
+![[Pasted image 20250916042324.png]]
+
+Configure thet ask
+```yaml
+gen-talos-config:
+
+env:
+
+TALOSCONFIG: "_out/talosconfig"
+
+CONTROL_PLANE_IP: 192.168.0.54
+
+WORKER_IP: 192.168.1.236
+
+cmds:
+
+- talosctl gen config talos-proxmox-cluster https://$CONTROL_PLANE_IP:6443 --output-dir _out --install-image factory.talos.dev/installer/ce4c980550dd2ab1b17bbf2b08801c7eb59418eafe8f279833297925d67c7515:v1.11.0
+
+- talosctl --talosconfig $TALOSCONFIG apply-config --insecure --nodes $CONTROL_PLANE_IP --file _out/controlplane.yaml
+
+- talosctl --talosconfig $TALOSCONFIG apply-config --insecure --nodes $WORKER_IP --file _out/worker.yaml
+
+- talosctl --talosconfig $TALOSCONFIG config endpoint $CONTROL_PLANE_IP
+
+- talosctl --talosconfig $TALOSCONFIG config node $CONTROL_PLANE_IP
+
+- talosctl --talosconfig $TALOSCONFIG config info
+```
+
 
 This is the IP of the node!
 ![[Pasted image 20250907013152.png]]
 
+Bootstrap it
+This is after boostrap
+
+![[Pasted image 20250916042520.png]]
 
 Control Plane
 
@@ -153,3 +191,18 @@ Try to run the `kubectl get all`
 
 
 https://www.youtube.com/watch?v=XmoHG_8TP6M
+
+
+Upgrading talos linux
+
+factory.talos.dev/metal-installer/6d1f5bd37d6a6bf937ad651c5482d93571942c19bb32dde87b6a17b5e443ec39:v1.11.1
+
+```sh
+talosctl --talosconfig talosconfig upgrade --image factory.talos.dev/metal-installer/6d1f5bd37d6a6bf937ad651c5482d93571942c19bb32dde87b6a17b5e443ec39:v1.11.1 --nodes 192.168.1.144,192.168.1.117 --preserve
+```
+
+![[Pasted image 20250916032626.png]]
+
+
+![[Pasted image 20250916045154.png]]
+![[Pasted image 20250916045219.png]]

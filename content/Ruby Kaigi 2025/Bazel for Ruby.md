@@ -8,5 +8,4 @@
 * Compile C/Java programs with CRuby/JRuby
 * Better debugg rdbg
 * test sharding
-*
 

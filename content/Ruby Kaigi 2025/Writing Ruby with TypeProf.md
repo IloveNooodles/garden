@@ -1,4 +1,4 @@
- * Steep or Sorbet 
+* Steep or Sorbet 
 * TypeProf
 	* Ruby Editor Support
 	* Error Report

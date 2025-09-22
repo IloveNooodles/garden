@@ -1,0 +1,1 @@
+So recently, i was using Obsidian as my notetaking app. But i found that i need to pay for about 10$ to sync with my phone and other devices. Luckily i found [Obsidian LiveSync](https://github.com/vrtmrz/obsidian-livesync) repository. I can 

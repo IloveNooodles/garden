@@ -683,3 +683,5 @@ I hope this guide could be helpful to u and don't hesitate to ping me if you hav
 2. [Talos](https://www.talos.dev/)
 3. [Kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
 4. [Proxmox](https://www.proxmox.com/en/)
+5. [Comparing Kubernetes Flavor](https://www.blueshoe.io/blog/minikube-vs-k3d-vs-kind-vs-getdeck-beiboot/)
+6. [Comparing Kubernetes Flavor Part 2](https://www.youtube.com/watch?v=atPvnJMGdfs)

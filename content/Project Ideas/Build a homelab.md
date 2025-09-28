@@ -4,15 +4,15 @@
 
 So i recently have an idea to deploy my project on the cloud using Kubernetes, i went on browsing to several cloud providers and found that they charge around `$0.1` per hour, for the lowest tier support
 
-* [Google](https://cloud.google.com/products/calculator?hl=en&dl=CjhDaVJtT1dWbVlXUmhZaTB3TWpCbExUUXlNVGN0WWpjNU1pMDRZVEZrTXpVNU1qZzRZVEVRQVE9PRAPGiQ2OTc3Q0Q5OS0yMkVELTREQUMtODA1OS01RERBMzVGMjc5MTE) Cost about $101 == ¥15000 per month for the specification 0.25vCPU and 1GiB of RAM
-* [Amazon](https://aws.amazon.com/eks/pricing/) Cost about $70 == ¥10350 per month for the same specification
+- [Google](https://cloud.google.com/products/calculator?hl=en&dl=CjhDaVJtT1dWbVlXUmhZaTB3TWpCbExUUXlNVGN0WWpjNU1pMDRZVEZrTXpVNU1qZzRZVEVRQVE9PRAPGiQ2OTc3Q0Q5OS0yMkVELTREQUMtODA1OS01RERBMzVGMjc5MTE) Cost about $101 == ¥15000 per month for the specification 0.25vCPU and 1GiB of RAM
+- [Amazon](https://aws.amazon.com/eks/pricing/) Cost about $70 == ¥10350 per month for the same specification
 
 When i was browsing amazon, i found that amazon sold a very decent mini pc for a cheap price
 [BMax Mini PC Turbo](https://www.amazon.co.jp/-/en/B4Turbo-Generation-Windows-Threads-Frequency/dp/B0DYNKCHNK?crid=3SY1VAROHM0T9&dib=eyJ2IjoiMSJ9.A8yaF9BzoZkvgbXlXKXg51xORFYLCBMAeivJXHASWkQCx50QfcukX3GbX5glmwdeiUjPIYcaBLUoyF8C4h5FjGcDZjRZiajLgER5rycpX3mxzYeAIUZXrDnU6ixpVX0r8SY24yKOra6zk8tR2Z4mtTaJRT5kUTKV9mputquPQNTSDkiZJw0kLZkOtBZe9lhdboc_WUAsxGSJgRSkQFWeSIvCL9teCpNwDxXJlfpUtPjDEnheKVquEigKDJAzd-2b7hQjjBwrjh7IeIJC2hhF_eShFQVfEZBCK2lNckmWjQw.F3W7mI5j3qh71Q4NswpKWR8VlX3uDI2OxKU57z-EqcU&dib_tag=se&keywords=bmax&qid=1758295622&sprefix=bmax,aps,201&sr=8-5)
 
-* DDR4 16 GB
-* 512 GB SSD
-* 4 Core
+- DDR4 16 GB
+- 512 GB SSD
+- 4 Core
 
 If we see the [Google Cloud](https://cloud.google.com/products/calculator?hl=en&dl=CjhDaVF5TTJRME5ERTNaQzFpWlRWbExUUmhNR0V0WW1KaE55MHpaamd3Tm1KaFltRm1Oak1RQVE9PRAPGiQ2OTc3Q0Q5OS0yMkVELTREQUMtODA1OS01RERBMzVGMjc5MTE) with the same spec it cost around $280 == ¥41500 per month. That's a lot of money :"DD, so based on this findings i decided to build my on homelab. To do this
 
@@ -20,9 +20,33 @@ but when i go to was thinking why i don't build my own server and expose it to i
 
 ## Table Of Content
 
-1. [Preface](#preface)
-2. [What you need](#what-you-need)
-3. [The Goal](#goal)
+<!-- toc -->
+
+- [What you need](#what-you-need)
+- [Goal](#goal)
+  * [For Development](#for-development)
+  * [Production Ready](#production-ready)
+- [Plan](#plan)
+  * [Setup Proxmox](#setup-proxmox)
+  * [Proxmox - Network](#proxmox---network)
+    + [MacOS](#macos)
+    + [Windows](#windows)
+  * [Setup Talos](#setup-talos)
+    + [Manual via UI](#manual-via-ui)
+    + [Installing via Terraform](#installing-via-terraform)
+      - [Proxmox Terraform User Setup](#proxmox-terraform-user-setup)
+      - [Terraform Files](#terraform-files)
+      - [Configure Talos](#configure-talos)
+      - [Configuring Kubernetes](#configuring-kubernetes)
+      - [Deploying Nginx pod](#deploying-nginx-pod)
+    + [FAQ](#faq)
+      - [Upgrading talos linux](#upgrading-talos-linux)
+      - [How to access this outside of our homenetwork](#how-to-access-this-outside-of-our-homenetwork)
+      - [I try to install stateful set but i got an error](#i-try-to-install-stateful-set-but-i-got-an-error)
+    + [Remarks](#remarks)
+    + [Reference](#reference)
+
+<!-- tocstop -->
 
 ## What you need
 
@@ -33,8 +57,7 @@ but when i go to was thinking why i don't build my own server and expose it to i
 5. If your machine have wireless network card interface then it should be ok
 6. USB Flashdisk 4GB or More
 
-> [!TODO]
-> Insert our setup
+![[./homelab-assets/tools-needed.jpeg]]
 
 ## Goal
 
@@ -73,7 +96,7 @@ Actually there are many more flavor than i listed above but i have personally tr
 | Installation | Quite Complex |  Simple  |  Simple   |
 |   Features   |    Minimal    | Moderate |   Rich    |
 
->[!NOTE]
+> [!NOTE]
 > Why i say talos is minimal is because by if we compare the default installation of talos with k3s and microk8s, talos only have the basic features
 > that are needed to run kubernetes. While k3s and microk8s have a lot of features such as storage, ingress, dashboard, etc. that are installed by default.
 
@@ -97,7 +120,7 @@ What makes proxmox interesting is that it have a web interface that can be used 
 
 ### Setup Proxmox
 
-1. Download Proxmox ISO from [here](https://www.proxmox.com/en/downloads/category/iso-images-pve)  i use the latest version `Proxmox VE 9.0`
+1. Download Proxmox ISO from [here](https://www.proxmox.com/en/downloads/category/iso-images-pve) i use the latest version `Proxmox VE 9.0`
 2. Prepare a USB Stick with at least 4GB capacity
 3. Burn the ISO to the USB Stick using [Rufus for Windows](https://rufus.ie/) or [balenaEtcher for MacOS](https://www.balena.io/etcher/). I haven't tried to use linux computer to burn the ISO, so you can try it by yourself. [Official Guide from Proxmox](https://pve.proxmox.com/wiki/Prepare_Installation_Media)
 4. After the Burning process is complete, plug the USB Stick to the machine that you want to install Proxmox
@@ -116,27 +139,26 @@ After the installation is complete, you will be prompted by a login form. Proxmo
 > [!NOTE]
 > The default `username` is `root`. The password is the one you put on the installation previously
 
-> [!TODO]
-> Insert  image of citadel login here
+![[./homelab-assets/proxmox-login.png]]
 
 ### Proxmox - Network
 
- 1. Fully Qualified Domain Name (FQDN)
- 1. This is a hostname that proxmox had. You can input anything as long this is FQDN
- 2. For me i input `citadel.gawrgare.home`
- 2. IP Address / CIDR
- 3. Gateway
- 4. DNS Server
+1. Fully Qualified Domain Name (FQDN)
+1. This is a hostname that proxmox had. You can input anything as long this is FQDN
+1. For me i input `citadel.gawrgare.home`
+1. IP Address / CIDR
+1. Gateway
+1. DNS Server
 
-* Gateway is how can router connect to external internet. This IP is usually ends with `1`. For example `192.168.0.1`
-* IP Address / CIDR is the range of IP Address that will be used by Proxmox
-  * Note that you need to reserve some IP from your router to make sure that these range of IP Addresses is not being used by your router `DHCP`
-  * If you're not sure, you
-* DNS Server  
+- Gateway is how can router connect to external internet. This IP is usually ends with `1`. For example `192.168.0.1`
+- IP Address / CIDR is the range of IP Address that will be used by Proxmox
+  - Note that you need to reserve some IP from your router to make sure that these range of IP Addresses is not being used by your router `DHCP`
+  - If you're not sure, you
+- DNS Server
 
 > [!NOTE]
 > DHCP Server is a mechanism that used by router to assign an IP to a device. It uses a lease mechanism to give machine and IP from the available list
->
+
 #### MacOS
 
 1. Go to setting, and find `WiFi Setting`
@@ -171,27 +193,27 @@ To install manually, we can start by login the web interface that Proxmox has gi
 6. After all complete, it will show you lot of a link and a hash of your choice. For example `efb7577422715f84c716c3d30fee60858fb093841d1d539ca5db92ae99737bf8`. The URL of download essentialy is `factory.talos.dev/metal-installer/[hash_id]:[version]`. So based on the schematic id it will be `factory.talos.dev/metal-installer/efb7577422715f84c716c3d30fee60858fb093841d1d539ca5db92ae99737bf8:v1.11.1`.
 7. Click the local-lvm and copy the ISO link generated by talos factory
 8. Go to Proxmox web interface, and create a new VM
-10. Pick any name that you want, we will create 2 VM 1 for control-plane and worker so i will name `talos-control-plane` and `talos-worker1`
-11. In the OS section, choose the ISO that you have downloaded previously
-12. In the System section you can leave it as default
-11. In the Hard Disk section you can allocate 20GB or more for the disk size
+9. Pick any name that you want, we will create 2 VM 1 for control-plane and worker so i will name `talos-control-plane` and `talos-worker1`
+10. In the OS section, choose the ISO that you have downloaded previously
+11. In the System section you can leave it as default
+12. In the Hard Disk section you can allocate 20GB or more for the disk size
 13. In the CPU section make sure the type is `x86-64-v2-AES` and you can allocate 2 core or more, i will chose 2 core
 14. For Memory you can allocate 2048MB or more, i will chose 4096MB
 15. In the Network section leave it as default and click finish
 
 > [!TIP]
 >
-> * Since talos is very minimal, Storage system in kubernetes is not included by default. So if you want to use storage in your kubernetes cluster you need to install `siderolabs/util-linux-tools` and `siderolabs/iscsi-tools` extension
-> * If you want to have Static ip for the OS, you need to choose the `Cloud Server` and pick `NoCloud`. In this guide i choose the bare-metal since it is the simplest one
-> * You can directly click this [link](https://factory.talos.dev/?arch=amd64&cmdline-set=true&extensions=-&extensions=siderolabs/gvisor&extensions=siderolabs/iscsi-tools&extensions=siderolabs/util-linux-tools&platform=metal&target=metal&version=1.11.1) to download the same image as mine
-> * You can see the detail guide in [Talos Official Documentation](https://www.talos.dev/v1.11/talos-guides/install/virtualized-platforms/proxmox/)
+> - Since talos is very minimal, Storage system in kubernetes is not included by default. So if you want to use storage in your kubernetes cluster you need to install `siderolabs/util-linux-tools` and `siderolabs/iscsi-tools` extension
+> - If you want to have Static ip for the OS, you need to choose the `Cloud Server` and pick `NoCloud`. In this guide i choose the bare-metal since it is the simplest one
+> - You can directly click this [link](https://factory.talos.dev/?arch=amd64&cmdline-set=true&extensions=-&extensions=siderolabs/gvisor&extensions=siderolabs/iscsi-tools&extensions=siderolabs/util-linux-tools&platform=metal&target=metal&version=1.11.1) to download the same image as mine
+> - You can see the detail guide in [Talos Official Documentation](https://www.talos.dev/v1.11/talos-guides/install/virtualized-platforms/proxmox/)
 
 Wait until it's finish booting and you should see this, the status should be `Maintenance`.
 ![[talos-booting-up.png]]
 
 > [!WARNING]
 > You need to this step twice, 1 for control-plane and 1 for worker
->
+
 #### Installing via Terraform
 
 I want to use terraform to manage my Proxmox. This section is completely optional you can skip it and straight to configuring Talos. To use terraform in Proxmox, we need to create a user in proxmox that has specific role attached to it. After the user has been created we will create a token specific for that user and will use it in the terraform.
@@ -410,19 +432,19 @@ resource "proxmox_virtual_environment_vm" "talos" {
 What the codeblocks gonna do
 
 1. It creates a locals variable that adds two nodes `control-plane` and `worker`
-2. We will use `proxmox_virtual_download_file`  to download the `.iso` files and keep it in our `Proxmox` storage. You can change the `URL` based on your `schematics`
+2. We will use `proxmox_virtual_download_file` to download the `.iso` files and keep it in our `Proxmox` storage. You can change the `URL` based on your `schematics`
 3. We will create a VM with following configurations
-1. 100GB of disk
-2. Dynamic IP Address
-3. 2 Cores CPU
-4. 4 GB of RAM
-5. QEMU Agent Enabled
+4. 100GB of disk
+5. Dynamic IP Address
+6. 2 Cores CPU
+7. 4 GB of RAM
+8. QEMU Agent Enabled
 
 > [!TIP]
 > Please refer to official [terraform documentation](https://registry.terraform.io/providers/bpg/proxmox/latest)for the detail configurations
 > I set `started = false` because sometimes the terraform state will get stuck, so we need to turn on the VM manually
 > You can [Configure Talos](#configure-talos) using terraform too with this [Talos Providers](https://registry.terraform.io/providers/siderolabs/talos/latest) but i will do it manually in this tutorial
->
+
 ##### Configure Talos
 
 1. We need to Install `talosctl` to configure our cluster. Since i'm in MacOS I will be using brew for this. For other OS you can see [official documentation](https://docs.siderolabs.com/omni/getting-started/how-to-install-talosctl)
@@ -446,10 +468,10 @@ talosctl gen config talos-proxmox-cluster https://$CONTROL_PLANE_IP:6443 --outpu
 
 What this command do? It will generate talos cluster config with the
 
-* Cluster Name of: `talos-proxmox-cluster`
-* Control Plane Address: `https://$CONTROL_PLANE_IP:6443`
-* Will output the result in `_out` directory
-* It will generate based on the our choice of ISO
+- Cluster Name of: `talos-proxmox-cluster`
+- Control Plane Address: `https://$CONTROL_PLANE_IP:6443`
+- Will output the result in `_out` directory
+- It will generate based on the our choice of ISO
 
 4. Now we need to export the variable of `TALOSCONFIG`
 
@@ -493,7 +515,7 @@ Certificate expires: 11 months from now (2026-09-16)
 talosctl --talosconfig $TALOSCONFIG bootstrap
 ```
 
-The OS will restart and  stage will be move to BOOTING state
+The OS will restart and stage will be move to BOOTING state
 ![[talos-first-booting-up.png]]
 
 Wait until the state to be `READY` and `KUBELET` is `active`
@@ -572,7 +594,7 @@ kubectl apply -f `pod.yaml`
 Verify by using curl inside the localhost
 
 ```sh
-kubectl exec pod/nginx-pod -- curl localhost               
+kubectl exec pod/nginx-pod -- curl localhost
 ```
 
 ```
@@ -620,7 +642,7 @@ talosctl --talosconfig talosconfig upgrade --image factory.talos.dev/metal-insta
 
 I use tailscale for this. Tailscale is some kind of VPN that create a mesh network of all our devices. We can register our Proxmox VM as a tailscale node and we can ssh to go inside and do the `kubectl` operating
 
-* If you want to manually apply in your local machine, you can make your Proxmox VM a subnet router so you can forward the network directly to your cluster
+- If you want to manually apply in your local machine, you can make your Proxmox VM a subnet router so you can forward the network directly to your cluster
 
 ##### I try to install stateful set but i got an error
 
@@ -645,17 +667,19 @@ And then patch our current cluster by using these commands with `192.168.1.57,19
 talosctl --talosconfig talosconfig patch machineconfig -p @longhorn.yaml -n 192.168.1.57,192.168.1.133
 ```
 
-#### Remaks
+#### Remarks
 
 With this project i learn a lot of stuff
 
 1. Storage system in kubernetes
-2. How does proxmox work
-3. How can we setup our own kubernetes cluster
+2. How does Proxmox work
+3. How can we setup our own Kubernetes cluster
 
 I hope this guide could be helpful to u and don't hesitate to ping me if you have a questions regarding this. All of the code could be found in my [citadel repository](https://github.com/IloveNooodles/citadel)
 
 #### Reference
 
 1. [Talos OS + Terraform + Kubernetes](https://www.youtube.com/watch?v=XmoHG_8TP6M)
-2.
+2. [Talos](https://www.talos.dev/)
+3. [Kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
+4. [Proxmox](https://www.proxmox.com/en/)

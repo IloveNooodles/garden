@@ -35,3 +35,7 @@ Software engineering is not about programming
 - Separation of concern
 - run everywhere
 
+See also:
+- [[Understanding Kubernetes Resources]] for resource management
+- [[Monitoring]] for observability in K8s
+- [[Best Practice Production]] for deployment strategies

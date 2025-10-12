@@ -1,3 +1,15 @@
+---
+title: Guitar Theory
+draft: false
+date: 2025-10-12
+tags:
+  - music
+  - guitar
+  - theory
+description: Fundamental guitar theory including strings, scales, and chords
+lang: en
+---
+
 ## Strings on Guitar 
 In guitar we have 6 scales, usually we can rhymes it with this, it go from the thinniest (bottom/1st) to the thicker (top/6th)
 

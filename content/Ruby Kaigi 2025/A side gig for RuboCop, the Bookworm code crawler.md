@@ -1,3 +1,16 @@
+---
+title: A side gig for RuboCop, the Bookworm code crawler
+draft: false
+date: 2025-10-12
+tags:
+  - ruby
+  - rubocop
+  - ast
+  - ruby-kaigi
+description: Using RuboCop's NodePattern API for code analysis with Bookworm
+lang: en
+---
+
 RuboCop is typically thought of as 'just' a linting or refactoring tool. However, one of RuboCop's foundational features, the NodePattern API, is so useful for crawling Ruby AST that an open-source tool called Bookworm has been written that uses the NodePattern API to understand the large Chef Ruby codebase used at Meta.
 
 Hierarchy conrols

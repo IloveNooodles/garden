@@ -1,3 +1,16 @@
+---
+title: Best Practice Production
+draft: false
+date: 2025-10-12
+tags:
+  - kubernetes
+  - production
+  - devops
+  - best-practices
+description: Best practices for production Kubernetes deployments
+lang: en
+---
+
 	1. apakah perlu multiple control plane?
 	2. apakah control plane perlu dipisah nodenya
 	3. Apa best practice security untuk productoin skip

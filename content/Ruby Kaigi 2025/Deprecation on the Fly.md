@@ -1,3 +1,14 @@
+---
+title: Deprecation on the Fly
+draft: false
+date: 2025-10-12
+tags:
+  - ruby
+  - deprecation
+  - ruby-kaigi
+description: Managing code deprecation in Ruby applications
+lang: en
+---
 
 1. Static analysis: Rubocop
 2. Learning from other leanguages

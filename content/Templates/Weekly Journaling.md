@@ -1,3 +1,15 @@
+---
+title: Weekly Journaling Template
+draft: false
+date: 2025-10-12
+tags:
+  - template
+  - journaling
+  - reflection
+description: Weekly reflection and planning template
+lang: en
+---
+
 **How did my week go?**
 - What success did I experience? What can I celebrate ? What can I be proud of ?
 - Any magic moments? (Besides text, I’d put here links to private (unlisted) youtube videos of our most magical moments.

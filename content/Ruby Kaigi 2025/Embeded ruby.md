@@ -1,3 +1,16 @@
+---
+title: Embedded Ruby
+draft: false
+date: 2025-10-12
+tags:
+  - ruby
+  - embedded
+  - mruby
+  - ruby-kaigi
+description: Embedded Ruby using mruby for IoT and embedded systems
+lang: en
+---
+
 Embedded Ruby
 Ruby: 1MB
 mruby: 128kb

@@ -1,3 +1,15 @@
+---
+title: How to be a Good Mentor
+draft: false
+date: 2025-10-12
+tags:
+  - mentoring
+  - engineering
+  - leadership
+description: Guidelines and best practices for effective mentoring
+lang: en
+---
+
 * Be a good role model
 - 1 on 1 
 - Checkout whether if there any issue

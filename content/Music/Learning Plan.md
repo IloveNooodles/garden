@@ -1,3 +1,15 @@
+---
+title: Guitar Learning Plan
+draft: false
+date: 2025-10-12
+tags:
+  - music
+  - guitar
+  - learning-plan
+description: A 12-week comprehensive guitar learning plan covering basics to advanced techniques
+lang: en
+---
+
 ## 📅 Weeks 1–2: The Absolute Basics
 
 **Guitar Skills**

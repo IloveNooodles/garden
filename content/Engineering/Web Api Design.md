@@ -1,3 +1,16 @@
+---
+title: Web API Design
+draft: false
+date: 2025-10-12
+tags:
+  - api
+  - rest
+  - engineering
+  - web
+description: Best practices for RESTful API design and implementation
+lang: en
+---
+
 # Why Rest
 
 - Simple, Stateless, scalable, cacheable

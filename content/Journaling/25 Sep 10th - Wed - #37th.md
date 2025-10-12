@@ -1,3 +1,14 @@
+---
+title: 25 Sep 10th - Wed - #37th
+draft: false
+date: 2025-09-10
+tags:
+  - journaling
+  - weekly-review
+description: Weekly reflection and goals
+lang: en
+---
+
 **How did my week go?**
 - What success did I experience? What can I celebrate ? What can I be proud of ?
 - Any magic moments? (Besides text, I’d put here links to private (unlisted) youtube videos of our most magical moments.

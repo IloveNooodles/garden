@@ -1,3 +1,15 @@
+---
+title: Ruby Security
+draft: false
+date: 2025-10-12
+tags:
+  - ruby
+  - security
+  - ruby-kaigi
+description: Security best practices and vulnerabilities in Ruby applications
+lang: en
+---
+
 # Agenda
 1. Ethitcally hacking github
 2. protecting ourselv

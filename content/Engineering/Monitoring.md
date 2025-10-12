@@ -1,3 +1,15 @@
+---
+title: Monitoring
+draft: false
+date: 2025-10-12
+tags:
+  - monitoring
+  - observability
+  - engineering
+  - datadog
+description: System monitoring and observability with metrics, logs, and traces
+lang: en
+---
 
 Monitoring is the action of observing and checking the behaviour and outputs of a system and it's components over time
 

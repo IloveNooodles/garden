@@ -1,3 +1,15 @@
+---
+title: UX Design
+draft: false
+date: 2025-10-12
+tags:
+  - ux
+  - design
+  - engineering
+description: User experience design principles and OOUI methodology
+lang: en
+---
+
 # UX
 
 User experience is a consequence of brand image press

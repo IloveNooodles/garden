@@ -1,3 +1,15 @@
+---
+title: Quality Assurance
+draft: false
+date: 2025-10-12
+tags:
+  - qa
+  - testing
+  - engineering
+description: Quality assurance practices and testing methodologies
+lang: en
+---
+
 # QA Activity
 
 - Set quality standards

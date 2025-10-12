@@ -1,3 +1,15 @@
+---
+title: Bazel for Ruby
+draft: false
+date: 2025-10-12
+tags:
+  - ruby
+  - bazel
+  - ruby-kaigi
+description: Using Bazel build system for Ruby projects
+lang: en
+---
+
 * Test regresstions
  	* Crystalball
 * Parallel test executions

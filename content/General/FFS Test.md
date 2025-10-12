@@ -1,3 +1,15 @@
+---
+title: Five Factor Survey (FFS) Test
+draft: false
+date: 2025-10-12
+tags:
+  - personality
+  - assessment
+  - psychology
+description: Understanding the Five Factor Survey personality assessment
+lang: en
+---
+
 # Five Factor Survey (FFS) Test
 
 Sociality

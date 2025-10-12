@@ -1,3 +1,15 @@
+---
+title: Japanese Training - 2025-03-04
+draft: false
+date: 2025-03-04
+tags:
+  - japanese
+  - language
+  - learning
+description: Japanese language training session notes
+lang: en
+---
+
 - Subject + Particle + sentence pattern
 	- あいさつ (Greetings)
 	- 場面表現 (bamenhyougen, situational phrases)

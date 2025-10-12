@@ -1,3 +1,16 @@
+---
+title: Kubernetes + Docker
+draft: false
+date: 2025-10-12
+tags:
+  - kubernetes
+  - docker
+  - containers
+  - devops
+description: Introduction to containerization with Docker and Kubernetes
+lang: en
+---
+
 Container
 
 - Container is to bundled everything with it's own library and files

@@ -1,3 +1,16 @@
+---
+title: Writing Good Documentation
+draft: false
+date: 2025-10-12
+tags:
+  - documentation
+  - engineering
+  - writing
+  - amazon
+description: Amazon's writing culture and best practices for technical documentation
+lang: en
+---
+
 # Amazon Writing Culture
 
 Good intentions don't work, mechanism work, amazon banned a long time ago

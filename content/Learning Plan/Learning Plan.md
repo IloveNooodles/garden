@@ -1,3 +1,13 @@
+---
+title: Learning Plan
+draft: false
+date: 2025-10-12
+tags:
+  - learning
+  - problem-solving
+description: Daily practice plan for improving problem-solving skills
+lang: en
+---
 
 > Practice and experience. I can tell you the solutions to many problems instantly. Not because I worked it out fast like some genius. Just because I've seen a similar problem before and I remember the approaches taken and whether they worked or not. Just keep trying. First yourself, then looking at other people's solutions to learn the best approach and why it is so. I don't think anybody was born solving complex problems. It's a skill you develop and it takes time.
 

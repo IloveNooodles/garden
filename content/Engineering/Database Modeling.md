@@ -1,3 +1,15 @@
+---
+title: Database Modeling
+draft: false
+date: 2025-10-12
+tags:
+  - database
+  - modeling
+  - engineering
+description: Database modeling fundamentals from conceptual to physical models
+lang: en
+---
+
 # Model
 
 ## Conceptual Model

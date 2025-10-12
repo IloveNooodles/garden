@@ -1,3 +1,15 @@
+---
+title: Logical Thinking
+draft: false
+date: 2025-10-12
+tags:
+  - thinking
+  - logic
+  - communication
+description: Framework for logical thinking and effective communication
+lang: en
+---
+
 # Logical Thinking
 
 ## Main Idea

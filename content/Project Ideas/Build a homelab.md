@@ -1,3 +1,17 @@
+---
+title: Build a Homelab with Talos OS and Proxmox
+draft: false
+date: 2025-10-12
+tags:
+  - homelab
+  - kubernetes
+  - proxmox
+  - talos
+  - project
+description: Complete guide to building your own homelab using Talos OS and Proxmox
+lang: en
+---
+
 # Build a Homelab with Talos OS and Proxmox
 
 ## Preface

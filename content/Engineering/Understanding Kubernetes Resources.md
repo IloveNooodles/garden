@@ -1,3 +1,14 @@
+---
+title: Understanding Kubernetes Resources
+draft: false
+date: 2025-10-12
+tags:
+  - kubernetes
+  - engineering
+  - devops
+description: Guide to understanding Kubernetes resources, QoS, CPU and memory limits
+lang: en
+---
 
 Pod have QoS = Quality Of Service
 * Guaranteed: req = limits

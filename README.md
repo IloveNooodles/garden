@@ -1,18 +1,24 @@
-# Quartz v4
+# Gare Digital Garden
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+> "The journey of a thousand miles begins with one step." — Lao Tzu 
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+## Welcome! |˶˙ᵕ˙ )ﾉﾞ
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+Hello, my name is Gare, and welcome to my Digital Garden!
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+## What is This?
 
-## Sponsors
+This is where I put my messy notes—some people call it a digital garden, others call it a second brain, but it's the same thing! The idea is to capture all of my thoughts in one place so I can revisit them later. I also want to promote learning in public so that not only I can gain knowledge, but others can too!
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+## About Me
+
+I am a software engineer who likes to try and explore new things ( ˶ˆᗜˆ˵ ). Recently, I got really hooked on [[tags/kubernetes]] and networking. I try to balance my technical knowledge with other hobbies such as photography, knitting, sports, reading books, and I'm currently learning to write.
+
+Nice to meet you, and I hope you enjoy your time here ( ˘͈ ᵕ ˘͈♡)
+
+> [!TIP]
+> Press `ctrl/cmd + k` to open quick search
+
+## Built With
+
+This digital garden is built with [Quartz v4](https://quartz.jzhao.xyz/)

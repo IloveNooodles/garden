@@ -4,8 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - benchmark
-  - performance
   - ruby-kaigi
 description: Benchmark-driven development and performance optimization in Ruby
 lang: en

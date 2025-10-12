@@ -4,8 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - cryptography
-  - security
   - ruby-kaigi
 description: Modern cryptography techniques and implementations in Ruby
 lang: en

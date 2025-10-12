@@ -4,7 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - namespaces
   - ruby-kaigi
 description: Understanding Ruby namespaces and module organization
 lang: en

@@ -4,7 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - security
   - ruby-kaigi
 description: Security best practices and vulnerabilities in Ruby applications
 lang: en

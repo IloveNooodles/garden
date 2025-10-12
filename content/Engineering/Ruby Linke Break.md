@@ -4,7 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - grammar
   - ruby-kaigi
 description: Understanding Ruby grammar and line break rules
 lang: en

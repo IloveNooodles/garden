@@ -17,7 +17,13 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "garden.mgarebaldhie.com",
-    ignorePatterns: ["Private", "Templates", "Excalidraw", ".obsidian"],
+    ignorePatterns: [
+      "Private",
+      "Templates",
+      "Excalidraw",
+      ".obsidian",
+      "Journaling",
+    ],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",

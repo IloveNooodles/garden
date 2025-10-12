@@ -4,7 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - splats
   - ruby-kaigi
 description: Understanding splat operators in Ruby
 lang: en

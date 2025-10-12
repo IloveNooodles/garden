@@ -4,8 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - ractor
-  - concurrency
   - ruby-kaigi
 description: Introduction to Ractor for parallel execution in Ruby
 lang: en

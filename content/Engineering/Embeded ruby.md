@@ -4,8 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - embedded
-  - mruby
   - ruby-kaigi
 description: Embedded Ruby using mruby for IoT and embedded systems
 lang: en

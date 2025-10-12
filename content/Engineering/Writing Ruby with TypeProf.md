@@ -4,7 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - typeprof
   - ruby-kaigi
 description: Notes on using TypeProf for Ruby type checking and editor support
 lang: en

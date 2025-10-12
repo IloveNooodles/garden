@@ -4,7 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - bazel
   - ruby-kaigi
 description: Using Bazel build system for Ruby projects
 lang: en

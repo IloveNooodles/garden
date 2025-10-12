@@ -1,11 +1,11 @@
 ---
-title: Japanese Training - 2025-03-04
+title: Japanese Training
 draft: false
 date: 2025-03-04
 tags:
+  - language
   - japanese
   - language
-  - learning
 description: Japanese language training session notes
 lang: en
 ---

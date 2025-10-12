@@ -5,7 +5,6 @@ date: 2025-10-12
 tags:
   - template
   - journaling
-  - reflection
 description: Weekly reflection and planning template
 lang: en
 ---

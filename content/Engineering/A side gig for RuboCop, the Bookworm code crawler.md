@@ -4,8 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - rubocop
-  - ast
   - ruby-kaigi
 description: Using RuboCop's NodePattern API for code analysis with Bookworm
 lang: en

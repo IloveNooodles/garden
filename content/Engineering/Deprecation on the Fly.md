@@ -4,7 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - deprecation
   - ruby-kaigi
 description: Managing code deprecation in Ruby applications
 lang: en

@@ -4,8 +4,6 @@ draft: false
 date: 2025-10-12
 tags:
   - ruby
-  - yjit
-  - performance
   - ruby-kaigi
 description: Understanding YJIT JIT compiler for Ruby performance optimization
 lang: en

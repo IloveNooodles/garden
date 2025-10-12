@@ -1,7 +1,7 @@
 ---
 title: A side gig for RuboCop, the Bookworm code crawler
 draft: false
-date: 2025-10-12
+date: 2025-04-16
 tags:
   - ruby
   - ruby-kaigi

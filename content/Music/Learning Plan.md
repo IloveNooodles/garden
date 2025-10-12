@@ -1,51 +1,30 @@
 ## 📅 Weeks 1–2: The Absolute Basics
 
 **Guitar Skills**
-
 - Learn guitar anatomy (frets, strings, tuning pegs, pickups if electric).
-    
 - Memorize the **string names** (E–A–D–G–B–E).
-    
 - Practice tuning (with an app or tuner).
-    
 - Learn basic **open chords**: C, G, D, A, E.
-    
 - Start simple strumming in **4/4 time** (downstrokes only, then add upstrokes).
-    
 
 **Theory**
-
 - Learn the **musical alphabet (A–G + sharps/flats)**.
-    
 - Understand **whole step / half step**.
-    
 - Learn why **B–C and E–F have no sharps**.
-    
-
 ---
 
 ## 📅 Weeks 3–4: First Songs & Keys
 
 **Guitar Skills**
-
 - Add minor chords: Am, Dm, Em.
-    
 - Practice chord changes slowly (use a metronome at 60–70 bpm).
-    
 - Learn 2–3 simple songs with open chords (lots of folk/pop songs use C–G–Am–F).
-    
 
 **Theory**
-
 - Learn the **C major scale** (C–D–E–F–G–A–B).
-    
 - Formula of a **major scale**: W–W–H–W–W–W–H.
-    
 - Understand **chords = 1st + 3rd + 5th** from the scale.
-    
 - Build your first triads (C major, D minor, E minor, etc.).
-    
-
 ---
 
 ## 📅 Weeks 5–6: Rhythm & Progressions

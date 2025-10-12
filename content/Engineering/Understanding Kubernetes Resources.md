@@ -17,9 +17,9 @@ we use m for milicores -> 100m =328 ft 1.00787 in 0.1 cores
 
 Monitor your applications
 
-set CPU limit only cause CPU throttling while host has a lot of idle CPU ![:think:](https://emoji.slack-edge.com/T02D9RVN1/think/67d88f9c77cbb7cf.gif)I follow the this simple rule:  
+set CPU limit only cause CPU throttling while host has a lot of idle CPU ! I follow the this simple rule:  
 + web service/api service with limited parallels process: no limit at all or very high value  
-+ web service/api service with unlimited parallels process: actually they should control limit in app code logic. ![:sweat_smile:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/apple-medium/1f605@2x.png)  If they are out of control, set limit at 4 CPU is ok. It only nessesary if we scare of ddos. Normal situation don't need limit.  
++ web service/api service with unlimited parallels process: actually they should control limit in  If they are out of control, set limit at 4 CPU is ok. It only nessesary if we scare of ddos. Normal situation don't need limit.  
 + batch job: must has CPU limit. may be 2x requests or 3x. Shouldn't use more than 50% host's available CPUweb service is latency optimized, we want to minimize latency to provide best experience for end-user and it usually idle, when it using all CPU available (that mean some user being queued and need to wait for other user request), you are f**ked up and should scale horizontal already.  
 For batch job, it is throughput optimized, we want to allow it consume as much as possible resources and expect that there is a big queue for it works. Without limit, it may cause impact to web service.
 
@@ -40,5 +40,5 @@ in k8s there are 3 QoS classes
 + Guaranteed -> request = limit. Highest  
 + BestEffort -> request < limit  
 + Burstable -> no limit. Lowestso BestEffort pod would have more priority than Burstable pod as long as request resource is ensured  
-the priority between BestEffort pods are hard to forcast (it's calculated base on rate between limit and request ![:sweat_smile:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/apple-medium/1f605@2x.png)  )  
+the priority between BestEffort pods are hard to forcast (it's calculated base on rate between limit and request  )  
 Using higher than request should be understand that: we need some peak in short time, it's ok if the host has free cpu and I gonna use it. But if there aren't free cpu, it's ok to not have more than request. (edited)

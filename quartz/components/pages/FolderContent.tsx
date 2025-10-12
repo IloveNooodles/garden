@@ -1,14 +1,14 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 
-import style from "../styles/listPage.scss"
-import { PageList, SortFn } from "../PageList"
 import { Root } from "hast"
-import { htmlToJsx } from "../../util/jsx"
+import { ComponentChildren } from "preact"
 import { i18n } from "../../i18n"
 import { QuartzPluginData } from "../../plugins/vfile"
-import { ComponentChildren } from "preact"
-import { concatenateResources } from "../../util/resources"
 import { trieFromAllFiles } from "../../util/ctx"
+import { htmlToJsx } from "../../util/jsx"
+import { concatenateResources } from "../../util/resources"
+import { PageList, SortFn } from "../PageList"
+import style from "../styles/listPage.scss"
 
 interface FolderContentOptions {
   /**
@@ -107,7 +107,8 @@ export default ((opts?: Partial<FolderContentOptions>) => {
         <article class={classes}>{content}</article>
         <div class="page-listing">
           {options.showFolderCount && (
-            <p>
+            <p class="folder-count">
+              <span class="folder-icon">🪾</span>
               {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
                 count: allPagesInFolder.length,
               })}
@@ -118,7 +119,7 @@ export default ((opts?: Partial<FolderContentOptions>) => {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   FolderContent.css = concatenateResources(style, PageList.css)

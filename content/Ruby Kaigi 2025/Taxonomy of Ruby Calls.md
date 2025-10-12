@@ -10,5 +10,7 @@ description: Classification of Ruby method calls based on performance characteri
 lang: en
 ---
 
+> Related: [[Ruby with YJIT]] for performance optimization, [[Benchmark]] for measuring call performance, [[Ruby Splats]] for argument handling
+
 * We can categorized based on work required for arguments passing
 

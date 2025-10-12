@@ -10,6 +10,8 @@ description: Security best practices and vulnerabilities in Ruby applications
 lang: en
 ---
 
+> Related: [[Modern Cryptography]] for encryption practices, [[Writing Ruby with TypeProf]] for type safety, [[A side gig for RuboCop, the Bookworm code crawler]] for security scanning
+
 # Agenda
 1. Ethitcally hacking github
 2. protecting ourselv

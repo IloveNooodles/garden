@@ -17,6 +17,8 @@ Pod have QoS = Quality Of Service
 
 CPU and Memory are the critical part of the pod
 
+> See also: [[Kubernetes + Docker]] for container basics, [[Monitoring]] for tracking resource usage, [[Best Practice Production]] for production deployments
+
 There are also a movement to not set CPU limit
 
 1vCPU = 1 cores

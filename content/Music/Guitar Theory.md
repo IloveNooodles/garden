@@ -10,6 +10,8 @@ description: Fundamental guitar theory including strings, scales, and chords
 lang: en
 ---
 
+> Related: [[Guitar Learning Plan]] for structured practice, [[Music Rhythm]] for rhythm theory
+
 ## Strings on Guitar 
 In guitar we have 6 scales, usually we can rhymes it with this, it go from the thinniest (bottom/1st) to the thicker (top/6th)
 

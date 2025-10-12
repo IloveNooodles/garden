@@ -18,12 +18,12 @@ lang: en
 	5. Base image untuk deployment?
 		1. bikin harden
 		2. dan tools buat scan
-	6. Pipeline -> harus dibaca
+	6. Pipeline -> harus dibaca (see [[Writing Good Documentation]])
 		1. config maps naro env
 	1. Apakah perlu distributed storage kaya longhorn / rook-ceph drpd PVC
-1. Mau liat structure code k8s di productoin contoh
+1. Mau liat structure code k8s di productoin contoh (see [[Understanding Kubernetes Resources]])
 2. Service Mesh apakah perlu
-3. Monitoring dan logging di k8s
+3. Monitoring dan logging di k8s (see [[Monitoring]])
 
 Hasil:
 1. ArgoCD itu sync repo dan state cluster
@@ -82,7 +82,7 @@ Hasil:
 15. Harus pake chart, mostlikely ada dan mungkin perlu bikin sendiri
 	1. versioning
 	2. helm chart, versioning, system helm
-16. OTEL
+16. OTEL (see [[Monitoring]] for observability details)
 	1. datadog
 	2. signoz
 	3. elk

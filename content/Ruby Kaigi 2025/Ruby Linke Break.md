@@ -10,6 +10,8 @@ description: Understanding Ruby grammar and line break rules
 lang: en
 ---
 
+> Related: [[Ruby Namespaces]] for code organization, [[Bazel for Ruby]] for build configuration
+
 # Grammar Allows Line Breaks
 Lexer is the main works
 * EXPR_END

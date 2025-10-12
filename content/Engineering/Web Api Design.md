@@ -18,6 +18,8 @@ lang: en
 - developers and it's industry standard
 - Rest API vs GraphQL vs  GRPC
 
+> Related: [[Quality Assurance]] for API testing, [[Writing Good Documentation]] for API docs
+
 ## API
 
 - Application programmable interface

@@ -10,6 +10,8 @@ description: Framework for logical thinking and effective communication
 lang: en
 ---
 
+> Related: [[Writing Good Documentation]] for clear communication, [[Five Factor Survey (FFS) Test]] for understanding communication styles, [[How to be a Good Mentor]] for teaching logical thinking
+
 # Logical Thinking
 
 ## Main Idea

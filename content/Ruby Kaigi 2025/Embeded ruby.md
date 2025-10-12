@@ -11,6 +11,8 @@ description: Embedded Ruby using mruby for IoT and embedded systems
 lang: en
 ---
 
+> Related: [[Modern Cryptography]] for secure embedded apps, [[Ractor]] for embedded concurrency, [[Benchmark]] for performance tuning
+
 Embedded Ruby
 Ruby: 1MB
 mruby: 128kb

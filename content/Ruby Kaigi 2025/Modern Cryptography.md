@@ -11,6 +11,8 @@ description: Modern cryptography techniques and implementations in Ruby
 lang: en
 ---
 
+> Related: [[Ruby Security]] for security best practices, [[Embedded Ruby]] for secure embedded systems
+
 HPKE using openssl API
 1. Protocols need whole cipher suite
 

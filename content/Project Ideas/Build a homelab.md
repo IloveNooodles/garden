@@ -12,6 +12,8 @@ description: Complete guide to building your own homelab using Talos OS and Prox
 lang: en
 ---
 
+> Related: [[Understanding Kubernetes Resources]] for K8s concepts, [[Kubernetes + Docker]] for container basics, [[Best Practice Production]] for production patterns, [[Monitoring]] for homelab monitoring
+
 # Build a Homelab with Talos OS and Proxmox
 
 ## Preface

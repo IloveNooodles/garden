@@ -10,6 +10,8 @@ description: A 12-week comprehensive guitar learning plan covering basics to adv
 lang: en
 ---
 
+> Related: [[Guitar Theory]] for theory basics, [[Music Rhythm]] for rhythm practice, [[Learning Plan]] for other learning paths
+
 ## 📅 Weeks 1–2: The Absolute Basics
 
 **Guitar Skills**

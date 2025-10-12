@@ -19,6 +19,8 @@ lang: en
 - establish a quality assurance system
 - quality assurance plays
 
+> Related: [[Web Api Design]] for API testing strategies, [[Best Practice Production]] for production quality
+
 ## Testing
 
 Why people make mistakes

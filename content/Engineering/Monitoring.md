@@ -15,6 +15,8 @@ Monitoring is the action of observing and checking the behaviour and outputs of 
 
 monitoring is a process to ensure stable operations by tracking performance status and swiftly detecting any issues
 
+> Related: [[Understanding Kubernetes Resources]], [[Kubernetes + Docker]], [[Best Practice Production]]
+
 ## How should we do monitoring?
 
 - Important things for the monitoring

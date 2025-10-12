@@ -10,6 +10,8 @@ description: Notes on using TypeProf for Ruby type checking and editor support
 lang: en
 ---
 
+> Related: [[A side gig for RuboCop, the Bookworm code crawler]] for code analysis, [[Ruby Security]] for type safety, [[Ruby Splats]] for type checking arguments
+
 * Steep or Sorbet 
 * TypeProf
 	* Ruby Editor Support

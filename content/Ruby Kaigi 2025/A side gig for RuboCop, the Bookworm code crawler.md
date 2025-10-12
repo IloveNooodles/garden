@@ -11,6 +11,8 @@ description: Using RuboCop's NodePattern API for code analysis with Bookworm
 lang: en
 ---
 
+> Related: [[Writing Ruby with TypeProf]] for type analysis, [[Benchmark]] for code performance, [[Deprecation on the Fly]] for code maintenance
+
 RuboCop is typically thought of as 'just' a linting or refactoring tool. However, one of RuboCop's foundational features, the NodePattern API, is so useful for crawling Ruby AST that an open-source tool called Bookworm has been written that uses the NodePattern API to understand the large Chef Ruby codebase used at Meta.
 
 Hierarchy conrols

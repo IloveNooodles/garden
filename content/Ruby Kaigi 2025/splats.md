@@ -10,6 +10,8 @@ description: Understanding splat operators in Ruby
 lang: en
 ---
 
+> Related: [[Taxonomy of Ruby Calls]] for method call patterns, [[Writing Ruby with TypeProf]] for type checking splats
+
 ```ruby
 v = []
 h = {kw: 1}

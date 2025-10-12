@@ -10,6 +10,8 @@ description: Using Bazel build system for Ruby projects
 lang: en
 ---
 
+> Related: [[Benchmark]] for build performance, [[Ruby Line Break]] for syntax configuration
+
 * Test regresstions
  	* Crystalball
 * Parallel test executions

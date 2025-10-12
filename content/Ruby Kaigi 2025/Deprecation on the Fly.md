@@ -10,6 +10,8 @@ description: Managing code deprecation in Ruby applications
 lang: en
 ---
 
+> Related: [[A side gig for RuboCop, the Bookworm code crawler]] for code analysis, [[Writing Good Documentation]] for deprecation notices
+
 1. Static analysis: Rubocop
 2. Learning from other leanguages
 

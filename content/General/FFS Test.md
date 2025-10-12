@@ -10,6 +10,8 @@ description: Understanding the Five Factor Survey personality assessment
 lang: en
 ---
 
+> Related: [[Logical Thinking]] for communication frameworks, [[How to be a Good Mentor]] for understanding personality types
+
 # Five Factor Survey (FFS) Test
 
 Sociality

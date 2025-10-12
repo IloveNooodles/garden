@@ -19,6 +19,8 @@ Good intentions don't work, mechanism work, amazon banned a long time ago
 - Narrative structure
 - Feedback Culture
 
+> Related: [[Web Api Design]] for API documentation, [[Logical Thinking]] for clear communication
+
 ## Document Types
 
 - Narratives

@@ -11,6 +11,8 @@ description: Understanding YJIT JIT compiler for Ruby performance optimization
 lang: en
 ---
 
+> Related: [[Benchmark]] for performance testing, [[Taxonomy of Ruby Calls]] for optimization strategies, [[Ractor]] for parallel execution
+
 # Code Patching
 # Global Invalidation
 

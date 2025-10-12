@@ -11,6 +11,8 @@ description: Benchmark-driven development and performance optimization in Ruby
 lang: en
 ---
 
+> Related: [[Ruby with YJIT]] for JIT performance, [[Taxonomy of Ruby Calls]] for call optimization, [[A side gig for RuboCop, the Bookworm code crawler]] for code analysis
+
 ```ruby
 require 'benchmark/ips'
 ```

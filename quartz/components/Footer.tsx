@@ -1,5 +1,4 @@
 import { version } from "../../package.json"
-import { i18n } from "../i18n"
 import style from "./styles/footer.scss"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
@@ -14,8 +13,9 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
-          Made By <a href="https://www.instagram.com/mgarebaldhie/">Gare</a> {" "}
-          {i18n(cfg.locale).components.footer.createdWith}{" "}
+          Made By{" "}
+          <a href="https://github.com/IloveNooodles">Gare</a>{" "}
+          {" + "}
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
         </p>
         <ul>
@@ -26,7 +26,7 @@ export default ((opts?: Options) => {
           ))}
         </ul>
       </footer>
-    )
+    );
   }
 
   Footer.css = style

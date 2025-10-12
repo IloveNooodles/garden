@@ -10,7 +10,6 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       LinkedIn: "https://www.linkedin.com/in/mgarebaldhie/",
       GitHub: "https://github.com/IloveNooodles/digital-garden",
-      Instagram: "https://www.instagram.com/mgarebaldhie/",
       Website: "https://mgarebaldhie.com/",
     },
   }),

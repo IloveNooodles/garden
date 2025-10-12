@@ -40,6 +40,7 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer(),
+    Component.RecentNotes({ title: "Recent Writing" }),
   ],
   right: [
     Component.Graph(),

@@ -11,19 +11,19 @@ description: Best practices for production Kubernetes deployments
 lang: en
 ---
 
-	1. apakah perlu multiple control plane?
-	2. apakah control plane perlu dipisah nodenya
-	3. Apa best practice security untuk productoin skip
-	4. Apakah perlu make kaya kubearmor dll2? skip
-	5. Base image untuk deployment?
-		1. bikin harden
-		2. dan tools buat scan
-	6. Pipeline -> harus dibaca (see [[Writing Good Documentation]])
-		1. config maps naro env
-	1. Apakah perlu distributed storage kaya longhorn / rook-ceph drpd PVC
-1. Mau liat structure code k8s di productoin contoh (see [[Understanding Kubernetes Resources]])
-2. Service Mesh apakah perlu
-3. Monitoring dan logging di k8s (see [[Monitoring]])
+1. apakah perlu multiple control plane?
+2. apakah control plane perlu dipisah nodenya
+3. Apa best practice security untuk productoin skip
+4. Apakah perlu make kaya kubearmor dll2? skip
+5. Base image untuk deployment?
+  1. bikin harden
+  2. dan tools buat scan
+6. Pipeline -> harus dibaca (see [[Writing Good Documentation]])
+  1. config maps naro env
+7. Apakah perlu distributed storage kaya longhorn / rook-ceph drpd PVC
+8. Mau liat structure code k8s di productoin contoh (see [[Understanding Kubernetes Resources]])
+9. Service Mesh apakah perlu
+10. Monitoring dan logging di k8s (see [[Monitoring]])
 
 Hasil:
 1. ArgoCD itu sync repo dan state cluster

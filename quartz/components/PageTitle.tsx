@@ -6,7 +6,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
   const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
   const baseDir = pathToRoot(fileData.slug!)
-  
+
   return (
     <h2 class={classNames(displayClass, "page-title")}>
       <a href={baseDir} title={title}>
@@ -36,6 +36,9 @@ PageTitle.css = `
   margin: 0;
 }
 
+.tree-ascii {
+}
+
 .page-title a {
   display: inline-flex;
   align-items: center;
@@ -61,6 +64,19 @@ PageTitle.css = `
   font-size: 1.5rem;
   color: white;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .tree-fallback {
+    display: inline;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .tree-foliage,
+  .tree-trunk {
+    display: none;
+  }
 }
 `
 

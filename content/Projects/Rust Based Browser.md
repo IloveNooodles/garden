@@ -1,6 +1,6 @@
 ---
 title: Rust Based Browser
-draft: false
+draft: true
 date: 2025-10-12
 tags:
   - rust

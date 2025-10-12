@@ -38,3 +38,23 @@ li.section-li {
     display: none;
   }
 }
+
+// Tree-themed elements
+.tree-divider {
+  text-align: center;
+  color: var(--secondary);
+  opacity: 0.7;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+.folder-count {
+  display: flex;
+  align-items: center;
+
+  .folder-icon {
+    font-size: 1.2em;
+  }
+}

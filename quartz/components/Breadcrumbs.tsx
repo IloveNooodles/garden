@@ -1,8 +1,8 @@
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import breadcrumbsStyle from "./styles/breadcrumbs.scss"
-import { FullSlug, SimpleSlug, resolveRelative, simplifySlug } from "../util/path"
-import { classNames } from "../util/lang"
 import { trieFromAllFiles } from "../util/ctx"
+import { classNames } from "../util/lang"
+import { FullSlug, SimpleSlug, resolveRelative, simplifySlug } from "../util/path"
+import breadcrumbsStyle from "./styles/breadcrumbs.scss"
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 type CrumbData = {
   displayName: string
@@ -29,11 +29,11 @@ interface BreadcrumbOptions {
 }
 
 const defaultOptions: BreadcrumbOptions = {
-  spacerSymbol: "❯",
-  rootName: "Home",
+  spacerSymbol: "→",
+  rootName: "🌲",
   resolveFrontmatterTitle: true,
   showCurrentPage: true,
-}
+};
 
 function formatCrumb(displayName: string, baseSlug: FullSlug, currentSlug: SimpleSlug): CrumbData {
   return {

@@ -28,8 +28,3 @@ Nice to meet you, and I hope you enjoy your time here ( ˘͈ ᵕ ˘͈♡)
 > [!TIP]
 > Press `ctrl/cmd + k` to open quick search
 
-## Built With
-
-This digital garden is built with [Quartz v4](https://quartz.jzhao.xyz/)
-
-

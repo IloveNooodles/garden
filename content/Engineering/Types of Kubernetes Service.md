@@ -1,5 +1,9 @@
 ---
-title:
+title: Types of Kubernetes Service
+date: 2025-10-13
+description: various type of kubernetes service and explanation
+tags:
+  - kubernetes
 ---
 
 ## ClusterIP
